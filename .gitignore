@@ -1,0 +1,56 @@
+# gradle
+
+.gradle/
+build/
+out/
+classes/
+
+# eclipse
+
+*.launch
+
+# idea
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# macos
+
+*.DS_Store
+
+# fabric
+
+run/
+
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+_backup_before_rta_impl_20260613_003330/
+.github/
+build/classes/
+build/datagen/
+build/generated/
+build/libs/
+build/loom-cache/
+build/processIncludeJars/
+build/reports/
+build/resources/
+build/tmp/
+docs/
+gradle/
+src/
+AGENTS.md
+.gitattributes
