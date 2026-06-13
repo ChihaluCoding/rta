@@ -14,14 +14,11 @@ public class RtaClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		RtaConfigStore.load();
 		RtaPauseButtons.register();
-		RtaDeathScreenNotice.register();
-		RtaClientReplayManager.registerCommands();
 
 		ClientPlayConnectionEvents.JOIN.register((listener, sender, client) -> RtaClientTimer.start());
 		ClientPlayConnectionEvents.DISCONNECT.register((listener, client) -> RtaClientTimer.stop());
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			RtaClientTimer.tick(client.isPaused());
-			RtaClientReplayManager.tick(client);
 			if (client.player != null) {
 				if (RtaConfigStore.get().fullBright) {
 					client.player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 260, 0, false, false, false));
